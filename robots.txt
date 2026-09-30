@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ayushkaf.github.io/guideyou-watch-companion-website/sitemap.xml

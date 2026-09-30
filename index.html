@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guide You Watch Companion</title>
+<meta name="description" content="A wellness companion for your phone and any smartwatch: calming vibration on elevated heart rate, guided breathing and sound therapy.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Guide You Watch Companion"><meta property="og:title" content="Guide You Watch Companion"><meta property="og:description" content="A wellness companion for your phone and any smartwatch: calming vibration on elevated heart rate, guided breathing and sound therapy."><meta property="og:url" content="https://ayushkaf.github.io/guideyou-watch-companion-website/"><meta property="og:image" content="https://ayushkaf.github.io/guideyou-watch-companion-website/assets/og-image.png"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://ayushkaf.github.io/guideyou-watch-companion-website/"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head><body>
+<header class="site"><div class="wrap"><a class="brand" href="index.html">Guide You Watch Companion</a><nav aria-label="Main"><a href="#features">Features</a><a href="#waitlist">Waitlist</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+<main>
+<div class="hero"><h1>A calmer moment, right on your wrist</h1>
+<p>Guide You Watch Companion is a wellness companion for your phone and any smartwatch. It is not a medical device.</p>
+<span class="btn off">Google Play &mdash; coming soon</span>
+<p class="note">Android only for now. Join the waitlist below to hear when it launches.</p></div>
+<section id="features"><div class="wrap"><h2>Features</h2><div class="grid">
+<div class="card"><h3>Calming vibration</h3><p>When your heart rate rises, your watch gives a gentle vibration to help you pause and settle.</p></div>
+<div class="card"><h3>Guided breathing</h3><p>Follow a simple paced-breathing session guided by your watch and phone.</p></div>
+<div class="card"><h3>Sound therapy</h3><p>Play calming rain and forest ambience, or your own audio, from your phone.</p></div>
+<div class="card"><h3>Private by design</h3><p>No accounts, no ads, no analytics. Heart-rate readings stay in memory on your watch.</p></div>
+</div></div></section>
+<section><div class="wrap"><h2>A look inside</h2><div class="shots">
+<img src="assets/shot1.svg" alt="Placeholder screenshot: live heart rate screen" width="270" height="540">
+<img src="assets/shot2.svg" alt="Placeholder screenshot: guided breathing screen" width="270" height="540">
+<img src="assets/shot3.svg" alt="Placeholder screenshot: sound therapy screen" width="270" height="540">
+</div><p class="note">Placeholder images &mdash; real screenshots to come.</p></div></section>
+<section id="waitlist"><div class="wrap"><h2>Get notified at launch</h2>
+<form id="wl" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"><label for="email" class="sr">Email address</label>
+<input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email"><button class="btn" type="submit">Notify me</button></form>
+<p class="note" id="wlmsg" role="status">We will only email you about the launch.</p></div></section>
+<section><div class="wrap"><p class="disclaimer">Guide You Watch Companion is for general wellness and relaxation only. It does not diagnose, treat or prevent any condition. If you feel unwell, seek medical help.</p></div></section>
+</main>
+<footer><div class="wrap"><p><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></p><p>Guide You Watch Companion is a wellness app, not a medical device.</p></div></footer>
+<script>
+document.getElementById('wl').addEventListener('submit',function(e){
+ e.preventDefault();
+ var f=e.target,m=document.getElementById('wlmsg');
+ if(f.action.indexOf('YOUR_FORM_ID')>-1){m.textContent='The waitlist is not switched on yet. Please check back soon.';return}
+ fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){
+  if(r.ok){f.reset();m.textContent='Thanks! We will let you know at launch.'}else{m.textContent='Sorry, the form service rejected that (status '+r.status+'). Please try again later.'}
+ }).catch(function(){m.textContent='Could not reach the form service. Check your connection and try again.'})
+});
+</script>
+</body></html>
